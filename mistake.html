@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style> 
+  	body {
+      position: relative;
+      width:100vw;
+      height:100vh;
+    	overflow: hidden;
+      background-image: url("img/mistake.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    h1 {
+      text-shadow: 0px 0px 5px black;
+      color: #fff;
+      padding-top: 50px;
+    }
+  </style>
+</head>
+<body>
+    <a href="emotion.html" class="btn btn-success p-3 m-2 position-relative" style="top:50%;left:30%">
+    Vi em dethuongg lam anh yeu em... 
+    </a>
+    <a id="myBtn" class="btn btn-danger p-3 d-inline-block m-2 position-absolute" style="top:50%;right:30%; width: 250px" onmouseover="myFunction()">
+    Em khong biett :)) ?????
+    </a>
+    <h1 class="text-center font-weight-bold">LOI GI COOOO?</h1>
+<script>
+function myFunction() {
+  document.getElementById("myBtn").style.left = (Math.floor(Math.random() * 70) +20)+"%";
+  document.getElementById("myBtn").style.top = (Math.floor(Math.random() * 70) +20)+"%";
+}
+$('#myBtn').click(function(){
+alert('Vớ vẩn :))');
+});
+</script>
+</body>
+</html>

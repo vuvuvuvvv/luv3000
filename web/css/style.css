@@ -1,0 +1,187 @@
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#bg {
+    background-image: linear-gradient(var(--rotate), #c8abf6, #a693e0, #924ce1);
+    animation: rotateBg 5s linear infinite;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    filter: blur(20px);
+}
+
+#cover-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+@keyframes rotateBg {
+    0% {
+        --rotate: 0deg;
+    }
+
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+#hello {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 6vw;
+    line-height: 10vw;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 3vw;
+    position: relative;
+}
+
+#hello div {
+    display: inline-block;
+    width: max-content;
+    height: 10vw;
+    position: relative;
+}
+
+#hello div span {
+    color: #fff
+}
+
+#hello div .icon {
+    position: absolute;
+    top: -35%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fly 1s linear;
+}
+
+#startBtn {
+    padding: 20px 45px;
+    font-size: 28px;
+    border: none;
+    border-radius: 20px;
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    color: #fff;
+    background-color: rgb(70, 223, 77);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+#startBtn::after,
+#startBtn::before {
+    content: "";
+    width: 20px;
+    height: 150px;
+    background-color: #fff;
+    position: absolute;
+    transform: rotate(20deg);
+    transition: 0.5s;
+}
+#startBtn::after {
+    width: 20px;
+    left: -40px;
+}
+#startBtn::before {
+    width: 4px;
+    left: -100px;
+}
+
+#startBtn:hover::after,
+#startBtn:hover::before {
+    left: calc(100% + 40px);
+}
+
+#startBtn:hover {
+    box-shadow: 0 4px 0 green;
+    transform: translateY(-4px);
+}
+
+@keyframes fly {
+    0% {
+        top: -35%;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        top: -55%;
+        opacity: 0;
+    }
+
+}
+
+.hi {
+    animation: show 0.5s linear;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+.d-none {
+    display: none !important;
+}
+
+.visible-hidden {
+    visibility: hidden;
+}
+
+.heart {
+    position: absolute;
+    text-shadow: 0 0 20px #fff;
+}

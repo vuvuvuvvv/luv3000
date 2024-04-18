@@ -89,7 +89,7 @@ body {
     cursor: pointer;
     position: relative;
     color: #fff;
-    background-color: rgb(70, 223, 77);
+    background-color: rgb(226 56 204);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,10 +107,12 @@ body {
     transform: rotate(20deg);
     transition: 0.5s;
 }
+
 #startBtn::after {
     width: 20px;
     left: -40px;
 }
+
 #startBtn::before {
     width: 4px;
     left: -100px;
@@ -122,7 +124,7 @@ body {
 }
 
 #startBtn:hover {
-    box-shadow: 0 4px 0 green;
+    box-shadow: 0 4px 0 #6e1976;
     transform: translateY(-4px);
 }
 
